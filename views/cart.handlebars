@@ -1,0 +1,28 @@
+<h1 class="center-align">Carrito de Compras</h1>
+<table class="highlight centered">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each cart}}
+            <div class="product">
+                <p>{{name}} - ${{price}}</p>
+                <!-- Formulario para eliminar el producto del carrito -->
+                <form action="/remove-from-cart" method="POST" style="display:inline;">
+                    <input type="hidden" name="productId" value="{{id}}">
+                    <button class="btn red" type="submit">Eliminar</button>
+                </form>
+            </div>
+        {{/each}}
+
+    </tbody>
+</table>
+<p class="right-align"><strong>Total:</strong> ${{total}}</p>
+<form action="/checkout" method="POST" class="center-align">
+    <button class="btn green" type="submit">Proceder a comprar</button>
+</form>
+<a href="/" class="btn blue">Seguir comprando</a>

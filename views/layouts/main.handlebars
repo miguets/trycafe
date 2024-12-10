@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css"> <!-- Tus estilos adicionales -->
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Iconos Material Design -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CoffeeDey</title>
+
+    <script>
+    $(document).ready(function(){
+      // Inicializa la sidenav
+      $('.sidenav').sidenav();
+    });
+  </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper navbar-fixed white text-color-black brown lighten-2">
+            <a href="#" class="left brand-logo"><img src="/media/cdlogo.png" alt="logo" style="height: 50px; margin: 5px;"></a>
+            <!-- Ícono que abre el menú lateral -->
+            <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons white-text">dehaze</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="http://localhost:3000/" class="white-text waves-purple"><i class="large material-icons left">home</i><b>Inicio</b></a></li>
+                <li><a href="#servicios" class="white-text waves-purple"><i class="large material-icons left">local_offer</i><b>Menú</b></a></li>
+                <li><a href="/cart" class="white-text waves-purple"><i class="large material-icons right">shopping_basket</i><b>Carrito</b></a></li>
+                <li><a href="http://localhost:3000/" class="light-green-text waves-purple"><i class="large material-icons right">money_off</i><b>Promociones</b></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Estructura del menú lateral (sidenav) -->
+    <ul id="mobile-demo" class="sidenav brown lighten-2">
+        <li><a href="http://localhost:3000/" class="white-text waves-purple"><i class="small material-icons left">home</i>Inicio</a></li>
+        <li><a href="#servicios" class="white-text waves-purple"><i class="small material-icons left">local_offer</i>Menú</a></li>
+        <li><a href="/cart" class="white-text waves-purple"><i class="small material-icons left">shopping_basket</i>Carrito</a></li>
+        <li><a href="http://localhost:3000/" class="light-green-text waves-purple"><i class="small material-icons left">money_off</i>Promociones</a></li>
+    </ul>
+
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <footer class="page-footer white" style="border: 2px solid black;">
+        <div class="container">
+            <div class="container center-align">
+                <p class="black-text"><b>Coffee Dey</b></p>
+            </div>
+            <div class="footer-copyright">
+                <div class="container black-text" id="footer">
+                    © 2024 Copyright Coffee Dey
+                </div>
+                <div>
+                    <a class="grey-text black-text right" href="https://www.instagram.com" target="_blank" style="margin-right: 30px;">@link</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
